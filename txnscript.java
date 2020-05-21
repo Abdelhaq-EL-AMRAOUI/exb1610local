@@ -230,7 +230,7 @@ public class txnscript
     {
         String result = "" ;
 		
-		String sql = "INSERT INTO Villes (nom, code_postal) VALUES(?,?)" ;
+		String sql = "INSERT INTO Villes (nom, codePostal) VALUES(?,?)" ;
 
 		try
 		{
@@ -323,7 +323,6 @@ public class txnscript
 	    	//String sql = "UPDATE Villes SET nom = ?, code_postal = ? WHERE id = ?" ;
 	    	String sql = "UPDATE Villes SET code_postal = ? WHERE nom = ?" ;
 
-
 		try
 		{
 			/*
@@ -334,7 +333,7 @@ public class txnscript
 				pstmt.executeUpdate();
 			*/
 				PreparedStatement pstmt = cnx.prepareStatement(sql) ;
-				pstmt.setDouble(1, code_postal);
+				pstmt.setDouble(1, code_Postal);
 				pstmt.setString(2, nom);
 				//pstmt.setInt(3, id);
 				pstmt.executeUpdate();
