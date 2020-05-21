@@ -313,9 +313,8 @@ public class txnscript
 		return result ;
     }
 
-	
-	
-    public static String updateVille (Integer id, String nom, Integer codePostal)
+	//public static String updateVille (Integer id, String nom, Integer code_Postal)
+    public static String updateVille (String nom, Integer code_Postal)
     {
         String result = "" ;
 		
@@ -333,7 +332,7 @@ public class txnscript
 				pstmt.executeUpdate();
 			*/
 				PreparedStatement pstmt = cnx.prepareStatement(sql) ;
-				pstmt.setDouble(1, codePostal);
+				pstmt.setDouble(1, code_Postal);
 				pstmt.setString(2, nom);
 				//pstmt.setInt(3, id);
 				pstmt.executeUpdate();
@@ -349,9 +348,6 @@ public class txnscript
 		result = result + saut_de_ligne ;		
 		return result ;
     }
-	
-
-	
 	
     public static String close()
     {
