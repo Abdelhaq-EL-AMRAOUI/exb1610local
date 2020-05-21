@@ -314,7 +314,7 @@ public class txnscript
     }
 
 	//public static String updateVille (Integer id, String nom, Integer code_Postal)
-    public static String updateVille (String nom, Integer code_Postal)
+    public static String updateVille (Integer id, String nom, Integer code_Postal)
     {
         String result = "" ;
 		
