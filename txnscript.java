@@ -315,7 +315,7 @@ public class txnscript
 
 	
 	
-    public static String updateVille (Integer id, String nom, Integer code_Postal)
+    public static String updateVille (Integer id, String nom, Integer codePostal)
     {
         String result = "" ;
 		
@@ -333,7 +333,7 @@ public class txnscript
 				pstmt.executeUpdate();
 			*/
 				PreparedStatement pstmt = cnx.prepareStatement(sql) ;
-				pstmt.setDouble(1, code_Postal);
+				pstmt.setDouble(1, codePostal);
 				pstmt.setString(2, nom);
 				//pstmt.setInt(3, id);
 				pstmt.executeUpdate();
