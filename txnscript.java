@@ -321,7 +321,7 @@ public class txnscript
 		
 		//modifacaion demandee
 	    	//String sql = "UPDATE Villes SET nom = ?, code_postal = ? WHERE id = ?" ;
-	    	String sql = "UPDATE Villes SET nom = ?, code_postal = ? WHERE nom = ?" ;
+	    	String sql = "UPDATE Villes SET code_postal = ? WHERE nom = ?" ;
 
 
 		try
@@ -336,7 +336,7 @@ public class txnscript
 				PreparedStatement pstmt = cnx.prepareStatement(sql) ;
 				pstmt.setDouble(1, code_postal);
 				pstmt.setString(2, nom);
-				pstmt.setInt(3, id);
+				//pstmt.setInt(3, id);
 				pstmt.executeUpdate();
 		}
 		catch (SQLException e)
