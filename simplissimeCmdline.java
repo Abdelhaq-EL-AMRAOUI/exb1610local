@@ -48,11 +48,12 @@ public class simplissimeCmdline {
 			{
 					System.out.println( "\n\nMettre a jour encore le code postal dans la base\n" ) ;
 					String sId = cl.getOptionValue("id") ;
-					Integer id = Integer.parseInt(sId);
+					//Integer id = Integer.parseInt(sId);
 					String nom = cl.getOptionValue("nom") ;
 					String sCp = cl.getOptionValue("cp") ;
 					Integer cp = Integer.parseInt(sCp);
-					display = txn.updateVille ( id, nom, cp ) ;
+					//display = txn.updateVille ( id, nom, cp ) ;
+		    			display = txn.updateVille ( nom, cp ) ;
 					System.out.println( display ) ;
             }
 
